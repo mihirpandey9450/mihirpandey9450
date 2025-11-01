@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentEats - Student Discount Coupons</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <h1 class="logo">StudentEats</h1>
+                <span class="tagline">Save More, Eat Better</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#coupons" class="nav-link">Coupons</a>
+                <a href="#restaurants" class="nav-link">Restaurants</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
+            <button class="btn btn-primary">Sign Up</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Exclusive Student Discounts at Your Favorite Restaurants</h2>
+                <p class="hero-subtitle">Save up to 50% with verified student coupons. Eat well, spend less.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">Restaurants</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Active Coupons</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Students Saving</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filters" id="coupons">
+        <div class="container">
+            <div class="filter-header">
+                <h3 class="section-title">Browse Coupons</h3>
+                <div class="filter-controls">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search restaurants..." class="search-input">
+                    </div>
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="all">All Categories</option>
+                        <option value="pizza">Pizza</option>
+                        <option value="burger">Burgers</option>
+                        <option value="asian">Asian</option>
+                        <option value="mexican">Mexican</option>
+                        <option value="cafe">Café</option>
+                        <option value="healthy">Healthy</option>
+                    </select>
+                    <select id="discountFilter" class="filter-select">
+                        <option value="all">All Discounts</option>
+                        <option value="high">30%+ Off</option>
+                        <option value="medium">20-29% Off</option>
+                        <option value="low">10-19% Off</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coupons Grid -->
+    <section class="coupons-section">
+        <div class="container">
+            <div id="couponsGrid" class="coupons-grid">
+                <!-- Coupons will be dynamically inserted here -->
+            </div>
+            <div id="noResults" class="no-results" style="display: none;">
+                <p>No coupons found. Try adjusting your filters.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="about">
+        <div class="container">
+            <h3 class="section-title">How It Works</h3>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4 class="step-title">Browse Coupons</h4>
+                    <p class="step-description">Explore hundreds of exclusive student discounts from local restaurants.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4 class="step-title">Claim Your Deal</h4>
+                    <p class="step-description">Click to reveal your unique coupon code and save it to your account.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4 class="step-title">Show & Save</h4>
+                    <p class="step-description">Present your coupon at checkout and enjoy instant savings on your meal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 class="footer-title">StudentEats</h4>
+                    <p class="footer-text">Connecting students with the best local restaurant deals.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <a href="#" class="footer-link">About Us</a>
+                    <a href="#" class="footer-link">For Restaurants</a>
+                    <a href="#" class="footer-link">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Legal</h4>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Cookie Policy</a>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Connect</h4>
+                    <a href="#" class="footer-link">Instagram</a>
+                    <a href="#" class="footer-link">Twitter</a>
+                    <a href="#" class="footer-link">Facebook</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 StudentEats. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="couponModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <div class="modal-body">
+                <h3 class="modal-title" id="modalTitle"></h3>
+                <p class="modal-restaurant" id="modalRestaurant"></p>
+                <div class="coupon-code-container">
+                    <div class="coupon-code" id="modalCouponCode"></div>
+                    <button class="btn btn-copy" id="copyCodeBtn">Copy Code</button>
+                </div>
+                <p class="modal-description" id="modalDescription"></p>
+                <div class="modal-details">
+                    <p><strong>Valid Until:</strong> <span id="modalExpiry"></span></p>
+                    <p><strong>Terms:</strong> <span id="modalTerms"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
